@@ -17,7 +17,7 @@ A three-finger gripper records multimodal tactile signals (**force**, finger **p
 pip install torch torchvision numpy pandas scikit-learn matplotlib seaborn
 ```
 
-Plus **`catCuda`** — a custom CUDA spiking kernel (the only non-pip import, used by `SNNmodel/models.py`). It is not on PyPI: build it from the TNNLS-25 low-latency-SNN toolkit (`python setup.py install`; [needs an NVIDIA GPU, sm_60+, and a CUDA toolkit)](https://github.com/zhangluyan9/Low-latency-SNNs). 
+Plus **`catCuda`** — a custom CUDA spiking kernel (the only non-pip import, used by `SNNmodel/models.py`). It is not on PyPI: build it from the [TNNLS-25 low-latency-SNN toolkit](https://github.com/zhangluyan9/Low-latency-SNNs) (`python setup.py install`; needs an NVIDIA GPU, sm_60+, and a CUDA toolkit). 
 
 > Stage 1 is pure NumPy/pandas and runs on CPU. **Stage 2 needs a GPU** (the SNN calls `.cuda()` via `catCuda`).
 
